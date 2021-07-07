@@ -1,0 +1,27 @@
+{
+  "name": "Compose Body",
+  "description": "A very basic example of message body manipulation",
+  "version": "1",
+  "applications": {
+    "gecko": {
+      "id": "composebody@sample.extensions.thunderbird.net",
+      "strict_min_version": "74.0b2"
+    }
+  },
+  "permissions": [
+    "compose"
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "pako.js",
+      "crypto-js.js",
+      "phpcrypt.js",
+      "crc32.js"
+    ]
+  },
+  "compose_action": {
+    "default_title": "Add Tracker"
+  },
+  "manifest_version": 2
+}
