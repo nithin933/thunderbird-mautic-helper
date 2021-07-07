@@ -2,7 +2,7 @@
 
 Simple addon created using the existing gmail helper plugin.
 
-###Steps to make Add-On
+### Steps to make Add-On
 1. git clone https://github.com/nithin933/thunderbird-mautic-helper.git
 2. cd thunderbird-mautic-helper
 3. open background.js and edit **mautic_secret**, **mautic_url**, **SENDEREMAILID**
@@ -10,15 +10,15 @@ Simple addon created using the existing gmail helper plugin.
 5. Rename file to **.xpi** extention
 6. install addon from thunderbird addon manager
 
-###Steps to prepare Mautic
+### Steps to prepare Mautic
 1. Enable Gmail Plugin
 2. Enter the same secret used above
 
 
-###Usage
+### Usage
 Start composing a new mail and click on the **"Add Tracker"** button to add tracking url.
 
-###Limitation
+### Limitation
 1.Apart from tracking sent mail and all subsequent reads correctly, all mails are marked read because of how thunderbird processes URL's.(This was also an issue that existed with the gmail plugin)
 
 If some can figure out how to filter out email-read receipts from thunderbird in the server side, this would be near perfect.
