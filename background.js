@@ -23,21 +23,16 @@ browser.composeAction.onClicked.addListener(async (tab) => {
     } else {
       mautic_secret = "examplesecret";
       mautic_url = "https://mautic.example.com"; // like https://mautic.example.com
-            fullemail = details.to[0];
-      var regex = /<(.*)>/g; // The actual regex
-      var matches = regex.exec(fullemail);
-      console.log("matches: ", matches);
-      if (matches) {
-        correctedmail = matches[1];
-      } else {
-        correctedmail = details.to[0];
-      }
+to = details.to.filter(String);
+var re = /[a-z0-9\._%+-]+@[a-z0-9\.]+(\.[a-z0-9]{2,})?/img;
+dest = to.join(' ').match(re).join(';');
+console.log("dest:",dest);
 
       var qs =
         "from=" +
         encodeURIComponent("SENDEREMAILID") +
         "&email=" +
-        encodeURIComponent(correctedmail)+
+        encodeURIComponent(dest)+
         "&subject=" +
         encodeURIComponent(details.subject) +
         "&body=" +
